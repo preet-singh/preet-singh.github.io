@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Preet Singh</title>
+    <link href='./index.css' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+</head>
+<body>
+    <main>
+        <div class='bio line-margin-top'>
+            <h1 class='bio-inline'>I'm Preet Singh, an aspiring fullstack web developer in Houston, TX.</h1>
+            <p class='bio-inline'> 
+                I create web applications with JavaScript, HTML, and CSS.
+                My professional background is in teaching, with experience in biomaterials research and development.
+                I have spent the past [four months...update] learning [HTML, CSS, JavaScript...update] with the ultimate goal of creating dynamic and efficient tools.
+                I am inspired by the impactfulness that code can have on society in providing innovative solutions to complex problems, and I aim to add to that impact in the future.
+            </p>
+        </div>
+        <span>
+            <a href='https://github.com/preet-singh' title='Go to my GitHub' target=blank><i class='fab fa-github icon-tech'></i></a>
+            <a href='https://www.linkedin.com/in/preet1313/' title='Go to my LinkedIn' target='blank'><i class='fab fa-linkedin icon-tech'></i></a>
+            <a href='mailto:preetsingh13@gmail.com' title='Email me'><i class='far fa-envelope icon-click icon-tech'></i></a>
+            <br/><br/><br/>
+        </span>
+        <div class='div div-pic draggable' onClick='bringCardToFront(this);'>
+            <a href='https://github.com/preet-singh' title='Go to my GitHub' target=blank>
+                <div class=each-website>
+                <img src='./assets/singh.png' class=website-image alt="Preet's headshot"/> <!-- Add image in here -->
+            </div>
+        </a>
+        </div>
+        <div class='div div-res draggable' onClick='bringCardToFront(this);'>
+            <span class=project-span>
+                <h2>Resume</h2>
+                <a href='' target=blank><i title="Go to Preet's Resume" class="fas fa-external-link-alt icon-project-span"></i></a>
+            </span>
+            <div class=each-website>
+                <img src='portfolio-resume.png' class=website-image alt="Preet's resume"/>
+            </div>
+        </div>
+        <div class='div div-sv draggable' onClick='bringCardToFront(this);'>
+            <span class=project-span>
+                <h2>Morbid History Quiz</h2>
+                <a href='https://github.com/thinkful-ei-gecko/Alexander-Preet-QuizApp' target=blank><i title='View on GitHub' class='fab fa-github icon-project-span'></i></a>
+                <a href=' https://thinkful-ei-gecko.github.io/Alexander-Preet-QuizApp/' target=blank><i title='Go to Morbid History Quiz' class="fas fa-external-link-alt icon-project-span"></i></a>
+            </span>
+            <div class='each-website'>
+                <img src='' class=website-image alt='Morbid History Quiz screenshot'/> <!--update with link-->
+                <div class=overlay>
+                    <p class=line-margin-bottom>A responsive and accessible multiple-choice quiz to test knowledge around some of the gorier moments in history.</p>
+                    <span>
+                        <a><i title='JavaScript' class='fab fa-js icon-tech'></i></a>
+                        <a><i title='HTML5' class='fab fa-html5 icon-tech'></i></a>
+                        <a><i title='CSS3' class='fab fa-css3-alt icon-tech'></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='div div-ref draggable' onClick='bringCardToFront(this);'>
+            <span class=project-span>
+                <h2>Hola - Learn Spanish</h2>
+                <a href='https://github.com/thinkful-ei-gecko/Preet-StevenR-Spaced-Repetition-Client' target=blank><i title='View on GitHub' class='fab fa-github icon-project-span'></i></a>
+                <a href='https://hola-app.now.sh/' target=blank><i title='Go to Hola - Learn Spanish' class="fas fa-external-link-alt icon-project-span"></i></a>
+            </span>
+            <div class=each-website>
+                <img src='' class=website-image alt='Hola screenshot'/> <!--update with link-->
+                <div class=overlay>
+                    <p class=line-margin-bottom>A fullstack app that lets users learn spanish via a spaced-repetition algorithm</p>
+                    <p class=line-margin-bottom>Frontend client uses React for UI, CSS Grid to display users’ question dashboard, score tracker, and Flexbox for responsive layout.</p>
+                    <p class=line-margin-bottom>Node.js backend implements a linked-list algorithm, and serves a REST API to store and manage user data.</p>
+                    <span>
+                        <a><i title='JavaScript' class='fab fa-js icon-tech'></i></a>
+                        <a><i title='React' class='fab fa-react icon-tech'></i></a>
+                        <a><i title='Node.js' class='fab fa-node icon-tech'></i></a>
+                        <a><i title='PostgreSQL' class='fas fa-database icon-tech'></i></a>
+                        <a><i title='HTML5' class='fab fa-html5 icon-tech'></i></a>
+                        <a><i title='CSS3' class='fab fa-css3-alt icon-tech'></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='div div-gal draggable' onClick='bringCardToFront(this);'>
+            <span class=project-span>
+                <h2>Minimalist</h2>
+                <a href='https://github.com/preet-singh/minimalist-client' target=blank><i title='View on GitHub' class='fab fa-github icon-project-span'></i></a>
+                <a href='' target=blank><i title='Go to Minimalist' class="fas fa-external-link-alt icon-project-span"></i></a> <!--update with link-->
+            </span>
+            <div class=each-website>
+                <img src='' class=website-image alt='Minimalist screenshot'/>
+                <div class=overlay>
+                    <p class=line-margin-bottom>A fullstack app that lets users organize their home inventory, and socialize with other users.</p>
+                    <p class=line-margin-bottom>Frontend client uses React for UI, and CSS Grid and Flexbox for responsive layout  </p>
+                    <p class=line-margin-bottom>Uses Node.js for backend CRUD operations, PostgreSQL to persist user data.</p>
+                    <span>
+                        <a><i title='JavaScript' class='fab fa-js icon-tech'></i></a>
+                        <a><i title='React' class='fab fa-react icon-tech'></i></a>
+                        <a><i title='Node.js' class='fab fa-node icon-tech'></i></a>
+                        <a><i title='PostgreSQL' class='fas fa-database icon-tech'></i></a>
+                        <a><i title='HTML5' class='fab fa-html5 icon-tech'></i></a>
+                        <a><i title='CSS3' class='fab fa-css3-alt icon-tech'></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='div div-wiki draggable' onClick='bringCardToFront(this);'>
+            <span class=project-span>
+                <h2>NowPlaying</h2>
+                <a href='https://github.com/thinkful-ei-gecko/NowPlaying-Client' target=blank><i title='View on GitHub' class='fab fa-github icon-project-span'></i></a>
+                <a href='https://playing-phi-ten.now.sh/' target=blank><i title='Go to NowPlaying' class="fas fa-external-link-alt icon-project-span"></i></a>
+            </span>
+            <div class=each-website>
+                <img src='' class=website-image alt='NowPlaying screenshot'/> 
+                <div class=overlay>
+                    <p class=line-margin-bottom>A fullstack app enabling users to create real-time watch parties for movies/tv-shows with other users and comment and interact with one another.</p>
+                    <p class=line-margin-bottom>Frontend client uses React for UI, as well as utilizing certain npm packages for extra funtionality, and uses CSS Flexbox for reponsive design.</p>
+                    <p class=line-margin-bottom>Node.js, Express, and PostgreSQL are used for CRUD operations and persisiting user data</p>
+                    <span>
+                        <a><i title='JavaScript' class='fab fa-js icon-tech'></i></a>
+                        <a><i title='React' class='fab fa-react icon-tech'></i></a>
+                        <a><i title='Node.js' class='fab fa-node icon-tech'></i></a>
+                        <a><i title='PostgreSQL' class='fas fa-database icon-tech'></i></a>
+                        <a><i title='HTML5' class='fab fa-html5 icon-tech'></i></a>
+                        <a><i title='CSS3' class='fab fa-css3-alt icon-tech'></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type='text/javascript' src='./index.js'></script>
+</body>
+</html>

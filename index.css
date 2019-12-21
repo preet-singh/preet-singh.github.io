@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+main {
+    font-family: 'Niramit', sans-serif;
+    background: linear-gradient(to bottom right, #24C6DC, #514A9D);
+    padding: 1em;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, p {
+    font-size: 1.2em; 
+    font-weight: normal; 
+}
+
+h2, .project-span {
+    display: inline-block;
+    padding: 0.15em;
+    font-size: 1.2em; 
+    font-weight: normal; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.hello {
+    position: relative;
+    font-size: 1.5em;
+    width: 1.5em;
+    top: 0.5em;
+    padding-bottom: 0.2em;
+    padding-left: 0.4em;
+}
+
+.bio {
+    position: relative;
+    width: 20em;
+    top: -0.8em;
+}
+
+.bio-inline {
+    display: inline;
+}
+
+.div {
+    box-sizing: border-box;
+    border: 0.1em black solid;
+    background-color:#DCDCDC;
+    position: relative;
+    box-shadow: 0.3em 0.3em 0.5em;
+    margin-right: 0.7em;
+}
+
+.each-website {
+    position: relative;
+    border-top: 0.1em black solid;
+}
+
+.website-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    opacity: 0;
+    transition: .5s ease;
+    padding: 0.7em;
+}
+
+.each-website:hover .overlay {
+    opacity: 0.9;
+    /* cursor: ; */
+}
+
+.div-res {
+    width: 35em;
+    left: 55em;
+    top: -34em;
+    margin-bottom: -34em;
+}
+
+.div-sv {
+    width: 30em;
+    left: 20.5em;
+    top: -23em;
+    margin-bottom: -23em;
+}
+
+.div-ref {
+    width: 50em;
+    left: 27em;
+    top: -44em;
+    margin-bottom: -44em;
+}
+
+.div-gal {
+    width: 40em;
+    left: 42em;
+    top: -23em;
+    margin-bottom: -23em;
+}
+
+.div-wiki {
+    width: 45em;
+    left: 59em;
+    top: -43em;
+    margin-bottom: -43em;
+}
+
+.div-pic {
+    width: 15em;
+    left: 35em;
+}
+
+.icon-tech {
+    font-size: 2em;
+    margin-right: 0.2em;
+}
+
+.icon-project-span {
+    font-size: 1.2em;
+    margin-right: 0.2em;
+}
+
+.line-margin-bottom {
+    margin-bottom: 0.5em;
+}
+
+.line-margin-top {
+    margin-top: 0.5em;
+}
+
+.padding-left {
+    padding-left: 0.2em;
+}
+
+@media (max-width: 1700px) {
+    .div-res {
+        left: 50em;
+        top: -33em;
+        margin-bottom: -33em;
+    }
+    
+    .div-sv {
+        width: 25em;
+        left: 19.5em;
+        top: -18.5em;
+        margin-bottom: -18.5em;
+    }
+    
+    .div-ref {
+        left: 25em;
+        top: -45em;
+        margin-bottom: -45em;
+    }
+    
+    .div-gal {
+        left: 36em;
+        top: -19em;
+        margin-bottom: -19em;
+    }
+    
+    .div-wiki {
+        left: 47em;
+        top: -47em;
+        margin-bottom: -47em;
+    }
+    
+    .div-pic {
+        width: 13em;
+    }
+}
+
+@media (max-width: 1550px) {
+    .div-res {
+        width: 30em;
+        left: 49.5em;
+        top: -34em;
+        margin-bottom: -34em;
+    }
+    
+    .div-sv {
+        left: 20.5em;
+        top: -20em;
+        margin-bottom: -20em;
+    }
+    
+    .div-ref {
+        width: 45em;
+        left: 24em;
+        top: -37em;
+        margin-bottom: -37em;
+    }
+    
+    .div-gal {
+        width: 35em;
+        left: 31em;
+        top: -22em;
+        margin-bottom: -22em;
+    }
+    
+    .div-wiki {
+        width: 40em;
+        left: 43em;
+        top: -40.5em;
+        margin-bottom: -40.5em;
+    }
+}
+
+@media (max-width: 1370px) {
+   
+    .div-res {
+        width: 25em;
+        top: -30em;
+        margin-bottom: -30em;
+    }
+    
+    .div-sv {
+        width: 20em;
+        top: -12em;
+        margin-bottom: -12em;
+    }
+    
+    .div-ref {
+        width: 40em;
+        top: -35em;
+        margin-bottom: -35em;
+    }
+    
+    .div-gal {
+        width: 30em;
+        top: -19em;
+        margin-bottom: -19em;
+    }
+    
+    .div-wiki {
+        width: 35em;
+        top: -36em;
+        margin-bottom: -36em;
+    }
+    
+    .div-pic {
+        width: 10em;
+    }
+}
+
+@media (max-width: 1281px) {
+    .div-res {
+        left: 42em;
+    }
+    
+    .div-sv {
+        width: 18em;
+        left: 20.5em;
+        top: -16em;
+        margin-bottom: -16em;
+    }
+    
+    .div-ref {
+        width: 35em;
+        left: 24em;
+        top: -30em;
+        margin-bottom: -30em;
+    }
+    
+    .div-gal {
+        width: 25em;
+        left: 29em;
+        top: -15em;
+        margin-bottom: -15em;
+    }
+    
+    .div-wiki {
+        width: 29em;
+        left: 41em;
+        top: -32.5em;
+        margin-bottom: -32.5em;
+    }
+}
+
+@media (max-width: 1175px) {
+
+    .div-res {
+        left: 33em;
+    }
+    
+    .div-ref {
+        width: 30em;
+    }
+    
+    .div-gal {
+        width: 23em;
+        left: 28.5em;
+        top: -9em;
+        margin-bottom: -9em;
+    }
+    
+    .div-wiki {
+        width: 25em;
+        left: 36em;
+        top: -33.5em;
+        margin-bottom: -33.5em;
+    }
+}
+
+@media (max-width: 1020px) {
+    .bio {
+        width: 19em;
+    }
+
+    .div-res {
+        left: 29em;
+        top: -32em;
+        margin-bottom: -32em;
+    }
+    
+    .div-sv {
+        width: 18em;
+        left: 16.5em;
+        top: -14em;
+        margin-bottom: -14em;
+    }
+    
+    .div-ref {
+        left: 20em;
+        top: -30em;
+        margin-bottom: -30em;
+    }
+    
+    .div-gal {
+        left: 24.5em;
+    }
+    
+    .div-wiki {
+        left: 31em;
+    }
+}
+
+@media (max-width: 925px), (hover: none) {
+
+    main, .bio, .div {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bio, .div {
+        max-width: 60em;
+        min-width: 20em;
+    }
+
+    .div { 
+        margin-top: 1em;
+    }
+
+    .div-wiki, .div-gal, .div-sv, .div-ref, .div-res, .div-pic {
+        left: 0em;
+        top: 0em;
+        margin-bottom: 1.7em;
+    }
+
+    .div-wiki {
+        order: 1;
+    }
+    
+    .div-gal {
+        order: 2;
+    }
+    
+    .div-ref {
+        order: 3;
+    }
+
+    .div-sv {
+        order: 4;
+    }
+        
+    .div-res {
+        order: 5;
+    }
+
+    .div-pic {
+        display: none;
+    }
+
+    .overlay {
+        position: relative;
+        opacity: 1;
+        padding: 0.7em;
+        border-top: 0.1em black solid;
+    }
+}
