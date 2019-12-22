@@ -128,6 +128,13 @@ a {
     left: 35em;
 }
 
+.div-seasons {
+    width: 45em;
+    left: 5em;
+    top: -23em;
+    margin-bottom: -23em;
+}
+
 .icon-tech {
     font-size: 2em;
     margin-right: 0.2em;
@@ -257,6 +264,12 @@ a {
     
     .div-pic {
         width: 10em;
+    }
+
+    .div-seasons{
+        width: 25em;
+        top: -35em;
+        margin-bottom: -35em;
     }
 }
 
