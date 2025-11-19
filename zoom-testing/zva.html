@@ -15,23 +15,72 @@
         <h1>
             ZVA-ZCC testing
         </h1>
-        <iframe id="zs-embed" style="width:750px; height:560px; border:0;"></iframe>
+    <!-- Your Zoom Scheduler iframe -->
+    <iframe id="zs-embed" style="width:750px; height:560px; border:0;"></iframe>
 
-        <script>
+    <script>
+        // Wait for DOM so the iframe exists
+        document.addEventListener("DOMContentLoaded", () => {
+
+        // 1. Find the iframe
         const iframe = document.querySelector('#zs-embed');
 
-        const base = "https://scheduler.zoom.us/preet-singh-481hka/hello-i-am-an-event-card?embed=true";
+        // 2. Static base URL for your scheduler (with required origin!)
+        const base = "https://scheduler.zoom.us/preet-singh-481hka/hello-i-am-an-event-card?embed=true&origin=https://www.preet-singh.com";
 
+        // 3. Extract your name from the page (fallbacks included)
+        const bioEl = document.querySelector('.bio-inline');
+        let first = 'Preet';
+        let last = 'Singh';
+
+        if (bioEl) {
+            const text = bioEl.textContent;
+            const match = text.match(/I'm\s+([A-Za-z'-]+)\s+([A-Za-z'-]+)\b/i);
+            if (match) {
+            first = match[1];
+            last = match[2];
+            }
+        }
+
+        // 4. Build params including UTMs + name
         const params = new URLSearchParams({
             utm_source: 'website',
             utm_medium: 'pricing',
             utm_campaign: 'fall',
-            firstname: window.userFirstName || 'Preet',
-            lastname: window.userLastName || 'Singh'
+            firstname: window.userFirstName || first,
+            lastname: window.userLastName || last
         });
 
-        iframe.src = `${base}&${params.toString()}`;
-        </script>
+        // 5. Attach params to iframe URL
+        const finalURL = `${base}&${params.toString()}`;
+        console.log("📡 Final Scheduler URL:", finalURL);
+
+        iframe.src = finalURL;
+        });
+
+        // 6. Listen for postMessage events (booking confirmed)
+        window.addEventListener('message', (event) => {
+        // Accept messages only from Zoom Scheduler
+        if (event.origin !== 'https://scheduler.zoom.us') {
+            return;
+        }
+
+        console.log("📬 Raw Zoom Scheduler postMessage:", event);
+
+        const data = event.data;
+        console.log("📦 Scheduler Payload:", data);
+
+        if (data?.event === 'scheduler.booking.confirmed') {
+            console.log("🎉 BOOKING CONFIRMED:", data);
+
+            // Example: fire analytics
+            // analytics.track("Booking Confirmed", data);
+
+            // Example: show custom UI
+            // document.body.innerHTML = "<h2>Thanks for booking!</h2>";
+        }
+        });
+    </script>
     </main>
     <script data-apikey="GhLV-NAEQ9KZuLy2N4R4_w" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
     <script data-apikey="GhLV-NAEQ9KZuLy2N4R4_w" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js"></script>
