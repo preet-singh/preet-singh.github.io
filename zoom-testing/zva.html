@@ -15,8 +15,23 @@
         <h1>
             ZVA-ZCC testing
         </h1>
-        <iframe src="https://scheduler.zoom.us/preet-singh-481hka/hello-i-am-an-event-card?embed=true"
-        frameborder="0" style="width: 750px; height: 560px;"></iframe>
+        <iframe id="zs-embed" style="width:750px; height:560px; border:0;"></iframe>
+
+        <script>
+        const iframe = document.querySelector('#zs-embed');
+
+        const base = "https://scheduler.zoom.us/preet-singh-481hka/hello-i-am-an-event-card?embed=true";
+
+        const params = new URLSearchParams({
+            utm_source: 'website',
+            utm_medium: 'pricing',
+            utm_campaign: 'fall',
+            firstname: window.userFirstName || 'Preet',
+            lastname: window.userLastName || 'Singh'
+        });
+
+        iframe.src = `${base}&${params.toString()}`;
+        </script>
     </main>
     <script data-apikey="GhLV-NAEQ9KZuLy2N4R4_w" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/chat-client.js"></script>
     <script data-apikey="GhLV-NAEQ9KZuLy2N4R4_w" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js"></script>
